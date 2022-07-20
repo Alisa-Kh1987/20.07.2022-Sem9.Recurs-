@@ -79,7 +79,6 @@ Console.Write("Введите натуральное число N: ");
 int N = Convert.ToInt32(Console.ReadLine());
 
 Console.WriteLine(PrintNumbersRecusiveType(M, N)) ;
-*/
 
 //Задача 67: Напишите программу, которая будет принимать на вход число и возвращать сумму его цифр.
 //453 -> 12
@@ -94,4 +93,7 @@ int SumNumbers(int number){
     if (number ==0) return 0; //условие окончания нашей рекурсии
     return number%10 + SumNumbers(number/10);
 }
+*/
+//полезная ссылка на хабре https://habr.com/ru/post/275813/
+
 
