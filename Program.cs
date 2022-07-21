@@ -2,7 +2,8 @@
 
 //Задача 63. Задайте значение N. Напишите программу, которая выведет все натуральные числа от 1 до N.
 //без рекурсии
-/*Console.Write("Input N: ");
+/*
+Console.Write("Input N: ");
 int N = Convert.ToInt32(Console.ReadLine());
 for (int i = 1; i<=N; i++)
 {
@@ -11,42 +12,39 @@ for (int i = 1; i<=N; i++)
 
 Console.WriteLine();
 
-//с использованием метода string (вывод строкой)
+//с использованием метода void (вывод строкой)
 
-// Console.Write("Введите натуральное число: ");
-// int N = Convert.ToInt32(Console.ReadLine());
-// for (int i = 1; i <= N; i++)
-// {
-//     Console.Write($"{i} ");
-// }
-// Console.WriteLine();
-
-void PrintNumbersStringType(int number)
+void PrintNumbers(int number)
 {
     for (int i = 1; i <= number; i++)
     {
-
-        Console.Write($"{i} ");
+    Console.Write($"{i} ");
     }
     Console.WriteLine();
 }
+Console.Clear();
+
+Console.Write("Введите натуральное число: ");
+int N = Convert.ToInt32(Console.ReadLine());
+PrintNumbers(N);
+
+//с использованием метода string
 
 string PrintNumbersStringType(int number)
 {
     string result = "";
     for (int i = 1; i <= number; i++)
     {
-        result += i.ToString()+" ";
+        result += i.ToString() + " ";
     }
-   return result;
+    return result;
 }
 Console.Clear();
 Console.Write("Введите натуральное число: ");
 int N = Convert.ToInt32(Console.ReadLine());
-//PrintNumbers(N);
-Console.WriteLine(PrintNumbersStringType(N)) ;
+Console.WriteLine(PrintNumbersStringType(N));
 
-
+/*
 //с рекурсией
 string PrintNumbersRecusiveType(int start, int end)
 {
@@ -93,7 +91,19 @@ int SumNumbers(int number){
     if (number ==0) return 0; //условие окончания нашей рекурсии
     return number%10 + SumNumbers(number/10);
 }
-*/
+
 //полезная ссылка на хабре https://habr.com/ru/post/275813/
-
-
+int PowNumbers(int A, int B)
+{
+    if (B == 0) return 1;
+    if (B == 1) return A;
+    else return PowNumbers(A, B - 1) * A;
+}
+Console.Clear();
+Console.WriteLine("Input A: ");
+int A = Convert.ToInt32(Console.ReadLine());
+Console.WriteLine("Input B: ");
+int B = Convert.ToInt32(Console.ReadLine());
+Console.WriteLine(PowNumbers(A, B));
+*/
+//Console.WriteLine($"answer -> {Math.Pow(A,B)}");
