@@ -93,6 +93,7 @@ int SumNumbers(int number){
 }
 
 //полезная ссылка на хабре https://habr.com/ru/post/275813/
+//задача про возведение в степень
 int PowNumbers(int A, int B)
 {
     if (B == 0) return 1;
